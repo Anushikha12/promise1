@@ -67,44 +67,43 @@ let printnum =new Promise((response,reject)=>{
       response(console.log("1"))
   },1000)
  
-}).then( ()=> new Promise((fullfilled,reject)=>{
+}).then( ()=> new Promise((response,reject)=>{
 
  setTimeout(()=>{
   response(console.log("2"))
  },2000)
 
-}) ).then( ()=> new Promise((fullfilled,reject)=>{
+}) ).then( ()=> new Promise((response,reject)=>{
 
  setTimeout(()=>{
   response(console.log("3"))
  },3000)
 
-}) ).then(()=> new Promise((fullfilled,reject)=>{
+}) ).then(()=> new Promise((response,reject)=>{
  
   setTimeout(()=>{
       response(console.log("4"))
   },4000)
 
-})).then(()=> new Promise((fullfilled,reject)=>{
+})).then(()=> new Promise((response,reject)=>{
  
   setTimeout(()=>{
       response(console.log("5"))
   },5000)
-})).then( ()=> new Promise((fullfilled,rej)=>{
+})).then( ()=> new Promise((response,reject)=>{
  
   setTimeout(()=>{
      response(console.log("6"))
   },6000)
 
-})).then(()=> new Promise((fullfilled,rej)=>{
+})).then(()=> new Promise((response,reject)=>{
   
   setTimeout(()=>{
       response(console.log("7"))
-      console.log("end of promises");
   },7000)
 })).catch(function(err){
   reject(console.log(err));
-}).finally(function(fin){
+}).finally(function(){
   console.log("it will be executed in the end whether there is error or not.");
 })
 
